@@ -107,6 +107,9 @@ void AppearanceFilter::init(const char* colmappath)
 
 			cameras.push_back({ cameraParameters[id], position });
 		}
+	} else {
+		std::cout << "[ERROR] Cannot open " << camerasListing << "." << std::endl;
+		exit(-1);
 	}
 }
 
